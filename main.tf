@@ -9,6 +9,14 @@ terraform {
 
 # Configure the GitHub Provider
 provider "github" {
-    token = "${{ secrets.REPO_TOKEN }}"
+    #token = "${{ secrets.REPO_TOKEN }}" ##GitHub Actions secret 
+    token = var.repo_token ##Local env variable testnig"
 }
 
+resource "github_repository" "new_repo" {
+  name        = var.repo_name
+  description = "New terraform repo"
+
+  visibility = "public"
+
+}
