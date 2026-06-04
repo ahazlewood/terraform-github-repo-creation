@@ -12,10 +12,11 @@ endif
 
 check-vars:
 ifndef TF_VAR_repo_name
-	@echo "TF_VAR_repo_name is not set locally, defaulting to 'new-repo'"
+	@echo "Error: TF_VAR_repo_name is not set. Run: export TF_VAR_repo_name=your-repo-name"
+	@exit 1
 endif
 ifndef TF_VAR_repo_token
-	@echo "Error: TF_VAR_repo_token is not set"
+	@echo "Error: TF_VAR_repo_token is not set. Run: export TF_VAR_repo_token=your-token"
 	@exit 1
 endif
 	@echo "All required variables are set."

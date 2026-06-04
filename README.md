@@ -47,7 +47,7 @@ The following environment variables must be set in your local shell before runni
 
 | Variable | Required | Description |
 |---|---|---|
-| `TF_VAR_repo_name` | Optional | Name of the GitHub repository to create. If not set, the Makefile will notify you and Terraform will default to `new-repo` |
+| `TF_VAR_repo_name` | **Required** | Name of the GitHub repository to create |
 | `TF_VAR_repo_token` | **Required** | GitHub personal access token with repo permissions |
 
 Set them in your shell:
